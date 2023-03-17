@@ -13,7 +13,7 @@ if (!document.getElementById(cssId)) {
 	link.id = cssId;
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=10';
+	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=11';
 	link.media = 'all';
 	head.appendChild(link);
 }
@@ -44,6 +44,7 @@ for (let i = 0; i < collection.length; i++) {
 	const t = collection[i];
 
 	t.setAttribute("id", "unleashed-slider-thumbnail-" + i);
+	t.innerHTML = ""; // necessary because Kajabi adds a &npsb;
 	if (UNLEASHED_SLIDER_ACTIVE) {
 		t.addEventListener("click", function () {
 			modalbg.style.display = "block";
