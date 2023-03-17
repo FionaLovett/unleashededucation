@@ -13,7 +13,7 @@ if (!document.getElementById(cssId)) {
 	link.id = cssId;
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=15';
+	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@1.1/unleashed-slider-popup.css?v=15';
 	link.media = 'all';
 	head.appendChild(link);
 }
@@ -33,7 +33,7 @@ document.body.appendChild(modalbg);
 document.body.appendChild(slidercontainer);
 
 const closeicon = document.createElement("img");
-closeicon.src = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/close-outline.png";
+closeicon.src = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@1.1/close-outline.png";
 closeicon.setAttribute("id", "unleashed-slider-close-button");
 closeicon.addEventListener("click", unleashedsliderpopupclose, false);
 
