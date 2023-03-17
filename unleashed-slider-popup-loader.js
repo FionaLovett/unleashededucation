@@ -1,10 +1,12 @@
-$(document).ready(function () {
-	let len = $('script').filter(function () {
-		return ($(this).attr('src').indexOf("unleashed-slider-popup.js") >= 0);
-	}).length;
+document.addEventListener('DOMContentLoaded', function () {
 
-	//if there are no scripts that match, the load it
-	if (len === 0) {
-		$.getScript("https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.js?v=7");
+	let scriptname = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.js?v=7";
+
+	if (!document.querySelector('script[src="' + scriptname + '"]')) {
+		// The script hasn't been loaded yet, so load it now
+		var script = document.createElement('script');
+		script.src = scriptname;
+		document.head.appendChild(script);
 	}
+
 });
