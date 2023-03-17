@@ -39,3 +39,19 @@
 .unleashed-slider-thumbnail img {
 	width: 100%;
 }
+
+
+[class^="PairSliderControlFullscreen__Container"] {
+	display: none;
+}
+
+[class^="Widget__Content"],
+[class^="PairSliderDivisionControl__Container"] {
+	max-height: 800px;
+}
+
+[class^="PairSliderPicture__Image"] {
+	max-height: 800px;
+	background-size: contain !important;
+	background-repeat: no-repeat;
+}

@@ -13,7 +13,7 @@ if (!document.getElementById(cssId)) {
 	link.id = cssId;
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=14';
+	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=15';
 	link.media = 'all';
 	head.appendChild(link);
 }
