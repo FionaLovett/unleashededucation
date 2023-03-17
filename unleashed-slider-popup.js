@@ -1,4 +1,3 @@
-const UNLEASHED_SLIDER_ACTIVE = true;
 function unleashedsliderpopupclose() {
 	modalbg.style.display = "none";
 	slidercontainer.style.display = "none";
@@ -13,7 +12,7 @@ if (!document.getElementById(cssId)) {
 	link.id = cssId;
 	link.rel = 'stylesheet';
 	link.type = 'text/css';
-	link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@1.2/unleashed-slider-popup.css?v=15';
+	link.href = GLOBAL_UNLEASHED_CDN + '/unleashed-slider-popup.css';
 	link.media = 'all';
 	head.appendChild(link);
 }
@@ -33,7 +32,7 @@ document.body.appendChild(modalbg);
 document.body.appendChild(slidercontainer);
 
 const closeicon = document.createElement("img");
-closeicon.src = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@1.2/close-outline.png";
+closeicon.src = GLOBAL_UNLEASHED_CDN + "/close-outline.png";
 closeicon.setAttribute("id", "unleashed-slider-close-button");
 closeicon.addEventListener("click", unleashedsliderpopupclose, false);
 
@@ -45,7 +44,9 @@ for (let i = 0; i < collection.length; i++) {
 
 	t.setAttribute("id", "unleashed-slider-thumbnail-" + i);
 	t.innerHTML = ""; // necessary because Kajabi adds a &npsb;
-	if (UNLEASHED_SLIDER_ACTIVE) {
+	if (typeof GLOBAL_UNLEASHED_DISABLE_POPUP !== "undefined" && GLOBAL_UNLEASHED_DISABLE_POPUP) {
+		t.style.cursor = "unset";
+	} else {
 		t.addEventListener("click", function () {
 			modalbg.style.display = "block";
 			slidercontainer.style.display = "block";
@@ -56,8 +57,6 @@ for (let i = 0; i < collection.length; i++) {
 			slidercontainer.appendChild(closeicon);
 			elfsightscript.setAttribute("src", elfsightsrc);
 		}, false);
-	} else {
-		t.style.cursor = "unset";
 	}
 
 	const img = document.createElement("img");
