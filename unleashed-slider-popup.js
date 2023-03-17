@@ -7,6 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		elfsightscript.setAttribute("src", "");
 	}
 
+	const cssId = 'unleashed-slider-css';  // you could encode the css path itself to generate id..
+	if (!document.getElementById(cssId)) {
+		var head = document.getElementsByTagName('head')[0];
+		var link = document.createElement('link');
+		link.id = cssId;
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = 'https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.css?v=2';
+		link.media = 'all';
+		head.appendChild(link);
+	}
+
 	const modalbg = document.createElement("div");
 	const slidercontainer = document.createElement("div");
 	const elfsightscript = document.createElement("script");
