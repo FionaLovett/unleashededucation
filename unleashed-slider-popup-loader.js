@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-	let scriptname = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@latest/unleashed-slider-popup.js?v=15";
+	let scriptname = "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@1.1/unleashed-slider-popup.js";
 
 	if (!document.querySelector('script[src="' + scriptname + '"]')) {
 		// The script hasn't been loaded yet, so load it now
