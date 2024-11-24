@@ -82,7 +82,7 @@ for (let i = 0; i < collection.length; i++) {
     a.setAttribute("class", "btn btn-small btn-solid btn-auto background-dark");
     a.setAttribute(
       "style",
-      `background-color: ${aColor}, border-color: ${aColor}`
+      `background-color: ${aColor}; border-color: ${aColor}; color: white; border-radius: 4px;`
     );
     a.innerText = aText;
     t.appendChild(a);
