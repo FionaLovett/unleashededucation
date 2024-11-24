@@ -71,8 +71,7 @@ for (let i = 0; i < collection.length; i++) {
   }
 
   const dtImg = t.getAttribute("data-img");
-  console.log(dtImg);
-  if (dtImg) {
+  if (!!dtImg) {
     const img = document.createElement("img");
     img.setAttribute("src", dtImg);
     t.appendChild(img);
@@ -83,9 +82,9 @@ for (let i = 0; i < collection.length; i++) {
     a.setAttribute("class", "btn btn-small btn-solid btn-auto background-dark");
     a.setAttribute(
       "style",
-      `{background-color: ${aColor}, border-color: ${aColor}}`
+      `background-color: ${aColor}, border-color: ${aColor}`
     );
-    a.setAttribute("innerText", aText);
+    a.innerText = aText;
     t.appendChild(a);
   }
 }
