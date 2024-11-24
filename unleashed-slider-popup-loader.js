@@ -1,7 +1,7 @@
 const GLOBAL_UNLEASHED_VERSION_CURRENT =
   typeof GLOBAL_UNLEASHED_VERSION !== "undefined"
     ? GLOBAL_UNLEASHED_VERSION
-    : "1.7";
+    : "1.8";
 const GLOBAL_UNLEASHED_CDN =
   "https://cdn.jsdelivr.net/gh/fionalovett/unleashededucation@" +
   GLOBAL_UNLEASHED_VERSION_CURRENT;
